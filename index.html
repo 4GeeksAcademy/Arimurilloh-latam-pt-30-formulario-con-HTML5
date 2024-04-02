@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment form example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <style>
+    .square-container {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .h2 {
+        margin-bottom: auto;
+
+    }
+    .red-row {
+      background-color: rgb(247, 225, 225);
+      color: rgb(141, 84, 84);
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      margin: 2px 2px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .amount-input {
+      position: relative;
+    }
+    .amount-input:before {
+      content: "$";
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+    .card-icons-container {
+      background-color: #afadad;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px;
+    }
+    .card-icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-square container">
+    <div class="card border-dark mb-3">
+    <div class="card-header">
+      <h2>Payment form example</h2>
+    </div>
+
+      <div class="card-body">
+        <div class="row red-row">Some fields are missing</div>
+  
+        <div class="row">
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="cardNumber">Card #</label>
+              <div class="input-group amount-input">
+                <input type="text" class="form-control" id="cardNumber" placeholder="XXXXXXXXXXXXXXXX">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="cvcNumber"><strong>CVC #</strong></label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="cvcNumber" placeholder="0000">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="amount"><strong>Amount</strong></label>
+              <div class="input-group amount-input">
+                <input type="text" class="form-control" id="amount" placeholder="Amount">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="firstName"><strong>First Name</strong></label>
+              <input type="text" class="form-control" id="firstName">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="lastName"><strong>Last Name</strong></label>
+              <input type="text" class="form-control" id="lastName">
+            </div>
+          </div>
+      
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="city"><strong>City</strong></label>
+              <input type="text" class="form-control" id="city">
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="state"><strong>State</strong></label>
+              <select class="form-control" id="state">
+                <option>Pick a State</option>
+                <option>San José</option>
+                <option>Alajuela</option>
+                <option>Cartago</option>
+                <option>Heredia</option>
+                <option>Guanacaste</option>
+                <option>Puntarenas</option>
+                <option>Limón</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="postalCode"><strong>Postal Code</strong></label>
+              <input type="text" class="form-control" id="postalCode">
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-auto mr-auto">
+            <p><strong>We accept:</strong></p>
+            <div class="form-group">
+              <div class="card-icons-container">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="mastercard">
+                  <label class="form-check-label" for="mastercard">
+                    <i class="fa-brands fa-cc-mastercard card-icon"></i>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="visa" value="visa">
+                  <label class="form-check-label" for="visa">
+                    <i class="fa-brands fa-cc-visa card-icon"></i>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="diners-club" value="diners-club">
+                  <label class="form-check-label" for="diners-club">
+                    <i class="fa-brands fa-cc-diners-club card-icon"></i>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="paypal">
+                  <label class="form-check-label" for="paypal">
+                    <i class="fa-brands fa-cc-paypal card-icon"></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 ml-sm-auto">
+            <div class="form-group">
+              <label for="message"><strong>Message</strong></label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+              <p>Add any notes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer content-end">
+        <div class="row justify-content-end">
+          <div class="col-sm-auto">
+            <button type="button" class="btn btn-secondary">Cancel</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
