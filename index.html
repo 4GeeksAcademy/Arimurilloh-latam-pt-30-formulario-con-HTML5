@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,49 +7,7 @@
   <title>Payment form example</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-  <style>
-    .square-container {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 20px;
-    }
-    .h2 {
-        margin-bottom: auto;
-
-    }
-    .red-row {
-      background-color: rgb(247, 225, 225);
-      color: rgb(141, 84, 84);
-      padding: 8px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      margin: 2px 2px;
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    .amount-input {
-      position: relative;
-    }
-    .amount-input:before {
-      content: "$";
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      transform: translateY(-50%);
-    }
-    .card-icons-container {
-      background-color: #afadad;
-      padding: 8px;
-      border-radius: 5px;
-      margin: 5px;
-    }
-    .card-icon {
-      font-size: 24px;
-      margin-right: 10px;
-    }
-  </style>
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container-square container">
@@ -64,8 +23,8 @@
           <div class="col-sm">
             <div class="form-group">
               <label for="cardNumber">Card #</label>
-              <div class="input-group amount-input">
-                <input type="text" class="form-control" id="cardNumber" placeholder="XXXXXXXXXXXXXXXX">
+              <div class="input-group">
+                <input type="number" class="form-control" id="cardNumber" placeholder="XXXXXXXXXXXXXXXX"> 
               </div>
             </div>
           </div>
@@ -73,7 +32,7 @@
             <div class="form-group">
               <label for="cvcNumber"><strong>CVC #</strong></label>
               <div class="input-group">
-                <input type="text" class="form-control" id="cvcNumber" placeholder="0000">
+                <input type="number" class="form-control" id="cvcNumber" placeholder="0000">
               </div>
             </div>
           </div>
@@ -81,7 +40,7 @@
             <div class="form-group">
               <label for="amount"><strong>Amount</strong></label>
               <div class="input-group amount-input">
-                <input type="text" class="form-control" id="amount" placeholder="Amount">
+                <strong>$</strong><input type="number" class="form-control" id="amount" placeholder="Amount">
               </div>
             </div>
           </div>
@@ -188,3 +147,5 @@
 
 </body>
 </html>
+
+

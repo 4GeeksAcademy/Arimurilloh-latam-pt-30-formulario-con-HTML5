@@ -1,0 +1,48 @@
+.square-container {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .h2 {
+      margin-bottom: auto;
+
+  }
+  .red-row {
+    background-color: rgb(247, 225, 225);
+    color: rgb(141, 84, 84);
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    margin: 2px 2px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .amount-input {
+    position: relative;
+  }
+  .amount-input::before {
+    content: "$";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+
+  }
+  .card-icons-container {
+    background-color: #afadad;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .card-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+   
